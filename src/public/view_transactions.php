@@ -12,18 +12,73 @@ $transactions = $wallet->getTransactions(1);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-<h2>Transactions</h2>
-<ul>
-    <?php foreach ($transactions as $transaction): ?>
-        <li><?php echo htmlspecialchars($transaction['amount']); ?> on <?php echo htmlspecialchars($transaction['created_at']); ?></li>
-    <?php endforeach; ?>
-</ul>
-<a href="new_transaction.php">Add Balance</a>
-<a href="view_balance.php">View Balance</a>
+<div class="container">
+    <h2>Transactions</h2>
+    <ul>
+        <?php foreach ($transactions as $transaction): ?>
+            <li><?php echo htmlspecialchars($transaction['amount']); ?> on <?php echo htmlspecialchars($transaction['created_at']); ?></li>
+        <?php endforeach; ?>
+    </ul>
+    <a href="new_transaction.php">Add Balance</a>
+    <a href="view_balance.php">View Balance</a>
+</div>
 </body>
 </html>

@@ -21,10 +21,10 @@ class Database
 
     public function __construct()
     {
-        $this->host = 'localhost';
-        $this->db = 'wallet';
-        $this->user = 'wallet';
-        $this->pass = 'wallet';
+        $this->host = 'mariadb';
+        $this->db = 'talabash';
+        $this->user = 'talabash';
+        $this->pass = 'talabash';
         $this->charset = 'utf8';
 
         $dsn = "mysql:host=$this->host;dbname=$this->db;charset=$this->charset";

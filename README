@@ -1,0 +1,7 @@
+# Talabash Wallet system
+You can serve this project on docker with this command:
+
+docker-compose up --build -d
+
+and you're good to go:
+http://localhost:8080/public/
